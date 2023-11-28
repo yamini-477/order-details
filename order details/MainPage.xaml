@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+xmlns:dataform="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:order_details"
+             BackgroundImageSource="shopping.png"
+             x:Class="order_details.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+
+
+    </ContentPage.BindingContext>
+    <VerticalStackLayout VerticalOptions="End" HorizontalOptions="End" >
+        <dataform:SfDataForm
+    DataObject="{Binding Model}"
+    LayoutType="TextInputLayout"
+            HeightRequest="600"
+            WidthRequest="200"
+            
+            />
+        
+
+        <buttons:SfButton x:Name="sfButton" Text="Submit" Background="Green" HeightRequest="100" WidthRequest="200" Margin="0,0,0,80" />
+       
+    </VerticalStackLayout>
+    
+    
+
+   
+
+
+
+
+
+
+</ContentPage>
